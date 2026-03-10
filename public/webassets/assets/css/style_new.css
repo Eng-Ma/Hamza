@@ -1,0 +1,205 @@
+.landing-hero {
+    position: relative;
+    min-height: 100vh;
+    /* / */
+    /*  */
+    background-image: url("{{ asset('webassets/assets/img/Container.png') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* طبقة تغميق خفيفة */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* المحتوى فوق الصورة */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* container للصورة */
+.feature-media {
+    position: relative;
+    overflow: hidden;
+}
+
+/* الصورة */
+.feature-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* زر Quick Add */
+.feature-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.landing-hero-about {
+    position: relative;
+    min-height: 60vh !important;
+}
+
+/* Hover على الكارد (للأجهزة التي تدعم hover فقط) */
+@media (hover: hover) {
+    .card.features:hover .feature-img {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    .card.features:hover .feature-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* في الجوال يظهر الزر دائمًا */
+@media (hover: none) {
+    .feature-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover على الزر */
+.feature-btn:hover {
+    background: #2b2828;
+    color: #fff;
+    border-color: #262121;
+}
+
+/* معلومات المنتج */
+.product-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* تأثير تكبير الصورة */
+.hover-zoom {
+    transition: transform 0.8s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+
+.about_image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_image h6 {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-wrapper .read-more {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+}
+
+
+.image-wrapper:hover .read-more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.read-more2 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 1 !important;
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+}
+
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.articles_div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.angeles_card {
+    text-align: center;
+    padding: 64px 32px;
+}
+
+.angeles_col {
+    padding: 0 !important;
+    border: 1px solid #ad9587;
+}
+
+.angeles_col2 {
+    padding: 0 !important;
+
+}
+
+.about_content {
+    text-align: center;
+}
+
+.about_content h2 {
+    margin-bottom: 20px;
+}

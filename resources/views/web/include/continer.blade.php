@@ -1,0 +1,28 @@
+<div class="demo-screen-headline main-demo main-demo-1 spacing-top overflow-hidden reveal" id="home">
+                    <div class="container px-sm-0">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 animation-zidex pos-relative">
+                                <h4 class="fw-semibold mt-7">Manage Your Business</h4>
+                                <h1 class="text-start fw-bold">We Help to Build Your Dream Project with Valex !</h1>
+                                <h6 class="pb-3">
+                                    Valex - Now you can use this admin template to design stunning dashboards
+                                    that will wow your target viewers or users to no end. To create a good and
+                                    well-structured dashboard,
+                                    you need to start from scratch with HTML, SCSS, CSS, and JS and with lots of coding,
+                                    but by using this Valex-Admin template.</h6>
+
+                                <a href="index.html"
+                                    target="_blank" class="btn ripple btn-min w-lg mb-3 me-2 btn-primary"><i
+                                        class="fe fe-play me-2"></i> Get Started
+                                </a>
+                                <a href="https://themeforest.net/user/spruko/portfolio"
+                                    class="btn ripple btn-min w-lg btn-outline-primary mb-3 me-2" target="_blank"><i
+                                        class="fe fe-eye me-2"></i>Discover More
+                                </a>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 my-auto">
+                                <img src="../assets/img/pngs/14.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
