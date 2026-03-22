@@ -1,4 +1,4 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 @section('title', 'Dashborad')
 @section('header')
     Dashboard
@@ -114,15 +114,15 @@
                             </div>
                             <span class="float-end my-auto ms-auto">
                                 @php
-                                    $thisWeek = \App\Models\Product::whereBetween('created_at', [
-                                        now()->startOfWeek(),
-                                        now()->endOfWeek(),
-                                    ])->count();
-                                    $lastWeek = \App\Models\Product::whereBetween('created_at', [
-                                        now()->subWeek()->startOfWeek(),
-                                        now()->subWeek()->endOfWeek(),
-                                    ])->count();
-                                    $diff = $thisWeek - $lastWeek;
+$thisWeek = \App\Models\Product::whereBetween('created_at', [
+    now()->startOfWeek(),
+    now()->endOfWeek(),
+])->count();
+$lastWeek = \App\Models\Product::whereBetween('created_at', [
+    now()->subWeek()->startOfWeek(),
+    now()->subWeek()->endOfWeek(),
+])->count();
+$diff = $thisWeek - $lastWeek;
                                 @endphp
                                 <i
                                     class="fas {{ $diff >= 0 ? 'fa-arrow-circle-up' : 'fa-arrow-circle-down' }} text-white"></i>
@@ -150,15 +150,15 @@
                             </div>
                             <span class="float-end my-auto ms-auto">
                                 @php
-                                    $thisWeek = \App\Models\User::whereBetween('created_at', [
-                                        now()->startOfWeek(),
-                                        now()->endOfWeek(),
-                                    ])->count();
-                                    $lastWeek = \App\Models\User::whereBetween('created_at', [
-                                        now()->subWeek()->startOfWeek(),
-                                        now()->subWeek()->endOfWeek(),
-                                    ])->count();
-                                    $diff = $thisWeek - $lastWeek;
+$thisWeek = \App\Models\User::whereBetween('created_at', [
+    now()->startOfWeek(),
+    now()->endOfWeek(),
+])->count();
+$lastWeek = \App\Models\User::whereBetween('created_at', [
+    now()->subWeek()->startOfWeek(),
+    now()->subWeek()->endOfWeek(),
+])->count();
+$diff = $thisWeek - $lastWeek;
                                 @endphp
                                 <i
                                     class="fas {{ $diff >= 0 ? 'fa-arrow-circle-up' : 'fa-arrow-circle-down' }} text-white"></i>

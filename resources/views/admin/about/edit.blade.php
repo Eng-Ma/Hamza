@@ -1,4 +1,4 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 
 @section('title', 'Edit Articles')
 

@@ -1,7 +1,7 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 
 @php
-    use App\Enums\StatusEnum;
+use App\Enums\StatusEnum;
 @endphp
 
 @section('title', 'Orders')

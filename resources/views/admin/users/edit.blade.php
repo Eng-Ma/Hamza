@@ -1,4 +1,4 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 
 @section('title', 'Products')
 
@@ -20,7 +20,7 @@
     <!--div-->
     <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
         <div class="card">
-            <form action="{{ route('admin.users.update',$user['id']) }}" method="POST" class="row g-3">
+            <form action="{{ route('admin.users.update', $user['id']) }}" method="POST" class="row g-3">
                 @csrf
                 <div class="card-body">
                     <div class="row">

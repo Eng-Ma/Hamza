@@ -1,4 +1,4 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 
 @section('title', 'Order Details')
 @section('header', 'Orders')
@@ -25,7 +25,7 @@
                         {{ ucfirst($order->status) }}
                     </span>
                 </p>
-                <p><strong>Total Price:</strong> ${{ number_format($order->total_price,2) }}</p>
+                <p><strong>Total Price:</strong> ${{ number_format($order->total_price, 2) }}</p>
 
                 {{-- زر Approve (لـ admin فقط) --}}
                 @if(auth()->check() && auth()->user()->type == 'admin' && $order->status == 'pending')
@@ -75,9 +75,9 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $item->product->name }}</td>
-                            <td>${{ number_format($item->price,2) }}</td>
+                            <td>${{ number_format($item->price, 2) }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>${{ number_format($item->price * $item->quantity,2) }}</td>
+                            <td>${{ number_format($item->price * $item->quantity, 2) }}</td>
                         </tr>
                         @endforeach
                     </tbody>

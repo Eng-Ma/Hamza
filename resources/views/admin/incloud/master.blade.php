@@ -45,11 +45,11 @@
     <div class="page">
         <div>
             <!-- main-header -->
-            @include('Admin.incloud.header')
+            @include('admin.incloud.header')
             <!-- /main-header -->
 
             <!-- main-sidebar -->
-            @include('Admin.incloud.sidebar')
+            @include('admin.incloud.sidebar')
             <!-- main-sidebar -->
         </div>
 
@@ -827,7 +827,7 @@
         </div><!-- modal -->
 
         <!-- Footer opened -->
-        @include('Admin.incloud.footer')
+        @include('admin.incloud.footer')
         <!-- Footer closed -->
 
     </div>

@@ -1,4 +1,4 @@
-@extends('Admin.incloud.master')
+@extends('admin.incloud.master')
 
 @section('title', 'Edit Articles')
 
@@ -56,8 +56,8 @@
                     <div class="col-md-12 mt-3">
                         <div id="contentsContainer">
                             @php
-                                $contents = json_decode($article->content, true) ?? [];
-                                $headers = json_decode($article->headers ?? '[]', true);
+$contents = json_decode($article->content, true) ?? [];
+$headers = json_decode($article->headers ?? '[]', true);
                             @endphp
 
                             @foreach($contents as $cIndex => $singleContent)
