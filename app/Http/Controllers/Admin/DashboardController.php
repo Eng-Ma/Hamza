@@ -25,6 +25,6 @@ class DashboardController extends Controller
         $failedOrders = Order::where('payment_status', 'failed')->count();
         $recentCustomers = Order::with('user')->latest()->take(5)->get();
         $orders = Order::with('items.product')->latest()->take(10)->get();
-        return view('admin.home.Dashboard', compact('thisWeek', 'lastWeek', 'diff', 'pendingOrders', 'failedOrders', 'recentCustomers', 'orders', 'paidOrders'));
+        return view('admin.home.dashboard', compact('thisWeek', 'lastWeek', 'diff', 'pendingOrders', 'failedOrders', 'recentCustomers', 'orders', 'paidOrders'));
     }
 }
