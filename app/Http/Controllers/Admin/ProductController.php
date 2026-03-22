@@ -20,13 +20,13 @@ class ProductController extends Controller
     {
         $products = Product::with('category')->orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.products.index', compact('products'));
+        return view('admin.products.index', compact('products'));
     }
     public function create()
     {
         $categories = Category::all();
         $product = new Product();
-        return view('Admin.products.create', compact('product', 'categories'));
+        return view('admin.products.create', compact('product', 'categories'));
     }
 
     public function store(CreateProductsRequest $request)

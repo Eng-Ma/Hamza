@@ -15,7 +15,7 @@ class ProfileController extends Controller
     {
         $id=auth()->user()->id;
         $user = User::find($id);
-        return view('Admin.profile.edit',compact('user'));
+        return view('admin.profile.edit', compact('user'));
     }
 
     public function update(Request $request)
@@ -41,7 +41,7 @@ class ProfileController extends Controller
     {
         $id=auth()->user()->id;
         $user = User::find($id);
-        return view('Admin.profile.resetPassword', compact('user') );
+        return view('admin.profile.resetPassword', compact('user'));
     }
 
     public function resetPassword(Request $request)

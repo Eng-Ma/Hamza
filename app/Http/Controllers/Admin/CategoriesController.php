@@ -19,12 +19,12 @@ class CategoriesController extends Controller
     {
         $categories = Category::orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.categories.index', compact('categories'));
+        return view('admin.categories.index', compact('categories'));
     }
     public function create()
     {
         $category = new Category();
-        return view('Admin.categories.create', compact('category'));
+        return view('admin.categories.create', compact('category'));
     }
 
     public function store(CreateCategoriesRequest $request)

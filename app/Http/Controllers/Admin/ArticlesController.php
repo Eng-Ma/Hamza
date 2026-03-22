@@ -20,12 +20,12 @@ class ArticlesController extends Controller
     {
         $articles = Article::orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.Articles.index', compact('articles'));
+        return view('admin.articles.index', compact('articles'));
     }
     public function create()
     {
         $article = new Article();
-        return view('Admin.Articles.create', compact('article'));
+        return view('admin.articles.create', compact('article'));
     }
 
     public function store(CreateArticlesRequest $request)

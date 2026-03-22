@@ -17,12 +17,12 @@ class SettingsController extends Controller
     {
         $settings = Setting::select("*")->orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.settings.index', compact('settings'));
+        return view('admin.settings.index', compact('settings'));
     }
     public function create()
     {
         $setting = new Setting();
-        return view('Admin.settings.create', compact('setting'));
+        return view('admin.settings.create', compact('setting'));
     }
 
     public function store(CreateSettingsRequest $request)

@@ -19,12 +19,12 @@ class AngelesController extends Controller
     {
         $angeles = Angele::orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.Angeles.index', compact('angeles'));
+        return view('admin.angeles.index', compact('angeles'));
     }
     public function create()
     {
         $angele = new Angele();
-        return view('Admin.Angeles.create', compact('angele'));
+        return view('admin.angeles.create', compact('angele'));
     }
 
     public function store(CreateAngelesRequest $request)
@@ -46,7 +46,7 @@ class AngelesController extends Controller
     public function edit($id)
     {
         $angele = Angele::findOrFail($id);
-        return view('Admin.Angeles.edit', compact('angele'));
+        return view('admin.angeles.edit', compact('angele'));
     }
 
     public function update(UpdateAngelesRequest $request, $id)

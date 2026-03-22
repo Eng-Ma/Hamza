@@ -19,12 +19,12 @@ class FaqsController extends Controller
     {
         $faqs = Faq::orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.faqs.index', compact('faqs'));
+        return view('admin.faqs.index', compact('faqs'));
     }
     public function create()
     {
         $faq = new Faq();
-        return view('Admin.faqs.create', compact('faq'));
+        return view('admin.faqs.create', compact('faq'));
     }
 
     public function store(CreateFaqsRequest $request)

@@ -19,12 +19,12 @@ class AboutsController extends Controller
     {
         $abouts = About::orderby('id', 'desc')->paginate(10);
 
-        return view('Admin.About.index', compact('abouts'));
+        return view('admin.about.index', compact('abouts'));
     }
     public function create()
     {
         $about = new About();
-        return view('Admin.About.create', compact('about'));
+        return view('admin.about.create', compact('about'));
     }
 
     public function store(CreateAboutRequest $request)
@@ -55,7 +55,7 @@ class AboutsController extends Controller
     public function edit($id)
     {
         $about = About::findOrFail($id);
-        return view('Admin.About.edit', compact('about'));
+        return view('admin.about.edit', compact('about'));
     }
 
     public function update(UpdateAboutRequest $request, $id)

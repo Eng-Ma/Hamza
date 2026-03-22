@@ -17,13 +17,13 @@ class ContactController extends Controller
 {
     public function index()  {
         $contacts = Contact::orderby('id', 'desc')->paginate(10);
-      return view('Admin.contact.index',compact('contacts'));
+        return view('admin.contact.index', compact('contacts'));
     }
 
     public function create()
     {
         $contact = new Contact();
-        return view('Admin.contact.create', compact('contact'));
+        return view('admin.contact.create', compact('contact'));
     }
 
     public function store(CreateContactRequest $request)
@@ -61,7 +61,7 @@ class ContactController extends Controller
     public function edit($id)
     {
         $contact = Contact::findOrFail($id);
-        return view('Admin.Contact.edit', compact('contact'));
+        return view('admin.Contact.edit', compact('contact'));
     }
 
     public function update(UpdateContactRequest $request, $id)
